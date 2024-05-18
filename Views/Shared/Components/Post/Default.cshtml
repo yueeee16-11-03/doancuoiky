@@ -1,0 +1,532 @@
+@using dona.Model;
+@model IList<viewPostMenu>
+<div class="hero-layout3">
+    <div class="row vs-carousel" data-arrows="false" data-dots="false" data-fade="true">
+        <div class="hero-inner">
+            <div class="hero-bg">
+                <video autoplay loop muted playsinline>
+                    <source src="assets/video/videodep.mp4" type="video/mp4">
+                    
+                </video>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-subtitle text-center d-block mx-auto">RIOT GAME</span>
+
+                    
+                    <h1 class="hero-title text-center">LEAGUE <br>OF LEGENDS</h1>
+                    <div class="hero-media">
+                       
+                      
+                    </div>
+    
+    
+  
+
+                    <div class="hero-btns text-center">
+    <a href="about.html" class="vs-btn outline3">MORE</a>
+</div>
+
+                    <div class="hero-popup">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Các hero-inner khác ở đây -->
+    </div>
+</div>
+
+    
+    <!--Featured Blog-->
+
+<section class="featured-blog-wrapper pos_bottom_hover feature-new-style1 bg-light-dark pt-60 pb-25">
+    <div class="container">
+        <div class="row multibg-color-cat vs-carousel arrow-white arrow-margin" data-arrows="true"
+            data-slide-show="3" data-lg-slide-show="4" data-md-slide-show="3" data-sm-slide-show="3"
+            data-xs-slide-show="2">
+
+            @{
+            var threenew= Model.Take(5).ToList();
+                foreach (var item in threenew)
+                {
+                <div class="vs-blog col-xl-3">
+                    <div class="position-relative">
+                        <a href="blog-details.html" class="overlay overlay-lg"></a>
+                        <div class="blog-image">
+                            <img src="@item.Images" alt="Featured Blog Image" class="w-100">
+                        </div>
+                        <div class="blog-content pos-bottom">
+                            <div class="blog-category mb-1">
+                                <a href="blog.html">@item.MenuName</a>
+                            </div>
+                            <h3 class="blog-title h5 text-white font-theme lh-base mb-2"><a href="blog-details.html">@item.Title</a></h3>
+                            <div class="blog-meta text-light-white fs-xs ">
+                                <a href="blog.html"><i class="fal fa-calendar-alt"></i>@item.createted_Date </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                Model.RemoveAt(0);
+                }
+            }
+        </div>
+    </div>
+</section>
+
+    <!--==============================
+    News Area
+    ==============================-->
+    <section class="vs-news-area bg-light-dark pb-30">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2 class="h4 text-white font-theme3 mt-md-n1 mb-4">HOT NEWS</h2>
+                    <div class="row pb-30">
+                        <div class="col-md-6 ">
+                            <div class="multibg-color-cat pos_bottom_hover feature-new-style1 vs-carousel  "
+                                data-slide-show="1">
+                                @{
+                                   var threennes= Model.ToList();
+                                      foreach (var test in threennes)
+                                    {
+                               <div class="position-relative vs-blog"style="max-width: 380px;height:420px;">
+                                    <a href="blog-details.html" class="overlay overlay-lg"></a>
+                                    <div class="blog-image">
+                                        <img src="@test.Images" alt="Latest Blog Image"
+                                            class="w-100">
+                                    </div>
+                                    <div class="blog-content pos-bottom">
+                                        <div class="blog-category mb-1">
+                                            <a href="blog.html">@test.MenuName</a>
+                                        </div>
+                                        <h3 class="blog-title h5 text-white font-theme lh-base mb-2"><a
+                                                href="blog-details.html">@test.Title
+                                                </a></h3>
+                                        <div class="blog-meta text-light-white fs-xs ">
+                                            <a href="blog.html"><i class="fal fa-calendar-alt"></i>@test.createted_Date</a>
+                                            <a href="blog.html"><i class="fal fa-user"></i>@test.author</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                  
+                            }
+                                    }
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="post-thumb-style1  ">
+                                @{   var faker= Model.Take(4).ToList();
+                                      foreach (var test in faker)
+                                    {
+                                <div class="vs-blog d-flex gap-3"style="max-width: 330px;height:100px;">
+                                    <div class="media-img">
+                                        <a href="blog-details.html"><img src="@test.Images"
+                                                alt="Recent Post" class="img-fluid h-w-120" style="max-width: 100px; height: auto;"></a>
+                                    </div>
+                                    <div class="media-body align-self-center">
+                                        <div class="blog-category">
+                                            <a href="blog.html"style="font-size: 14px;">@test.MenuName</a>
+                                        </div>
+                                        <h4 class="h5 blog-title font-theme lh-base text-white mb-0"><a
+                                                href="blog-details.html" style="font-size: 18px;">@test.Title</a></h4>
+                                    </div>
+                                </div>
+                                }
+                                }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="h4 text-white font-theme3 mt-md-n1 mb-4">most viewed</h2>
+                    <div class="multibg-color-cat mb-55">
+                        @{   var keria= Model.Take(4).ToList();
+                                      foreach (var test in keria)
+                                    {
+                        <div class="vs-blog bg-major-black mb-20 hover_div"style="max-width: 710px;height:207.71px">
+                            <div class="row gx-xl-5">
+                                <div class="col-md-6">
+                                    <div class="blog-image">
+                                        <a href="blog-details.html"><img class="w-100" style="max-width: 331.4px; height: 207.71px;"
+                                                src="@test.Images" alt="Blog Image"></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 align-self-center">
+                                    <div class="blog-conent pt-25 pb-20 px-30 px-md-0 pe-xl-5">
+                                        <div class="blog-category mb-1">
+                                            <a href="blog.html" style="font-size: 14px;">@test.MenuName</a>
+                                        </div>
+                                        <h3 class="blog-title text-white font-theme h5"><a
+                                                href="blog-details.html"style="font-size: 18px;">@test.Title
+                                                </a></h3>
+                                        <div class="blog-meta text-light fs-xs">
+                                            <a href="blog.html"><i class="fal fa-calendar-alt"></i>@test.createted_Date</a>
+                                            <a href="blog.html"><i class="fal fa-user"></i>@test.author</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        }
+                        }
+                        
+                        
+                    </div>
+
+                    
+                </div>
+                <style>
+   
+</style>
+                <div class="col-lg-4 col-lg-offset-8"style="max-width: 33%;height:33%;" >
+                    <div class="vs-sidebox bg-major-black">
+                        <h3 class="sidebox-title text-white h5">Social Connect</h3>
+                        <ul class="links-stretch">
+                            <li><a href="#"><span class="fab fa-facebook-f"> 5000 Likes</span></a></li>
+                            <li><a href="#"><span class="fab fa-twitter"> 5000 Follow</span></a></li>
+                            <li><a href="#"><span class="fab fa-youtube"> 5k Subscribe</span></a></li>
+                            <li><a href="#"><span class="fab fa-vimeo">1k Subscribe</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="vs-sidebox bg-major-black">
+                        <h3 class="sidebox-title text-white h5">Top Games</h3>
+                        <div class="row no-gutters g-2">
+                            <div class="col-lg-6 col-auto">
+                                <div class="image-scale-hover mini_hover_border"><a href="blog-details.html"><img
+                                            src="assets/img/widget/sidebbox-img-1.jpg" class="w-100"
+                                            alt="Sidebox Image"></a></div>
+                            </div>
+                            <div class="col-lg-6 col-auto">
+                                <div class="image-scale-hover mini_hover_border"><a href="blog-details.html"><img
+                                            src="assets/img/widget/sidebbox-img-2.jpg" class="w-100"
+                                            alt="Sidebox Image"></a></div>
+                            </div>
+                            <div class="col-lg-6 col-auto">
+                                <div class="image-scale-hover mini_hover_border"><a href="blog-details.html"><img
+                                            src="assets/img/widget/sidebbox-img-3.jpg" class="w-100"
+                                            alt="Sidebox Image"></a></div>
+                            </div>
+                            <div class="col-lg-6 col-auto">
+                                <div class="image-scale-hover mini_hover_border"><a href="blog-details.html"><img
+                                            src="assets/img/widget/sidebbox-img-4.jpg" class="w-100"
+                                            alt="Sidebox Image"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vs-sidebox" data-bg-src="assets/img/bg/newsletter-bg-1.png" data-overlay="dark"
+                        data-opacity="8">
+                        <form action="#" class="sidebox-newsletter text-center z-index-common">
+                            <div class="form-icon mb-15">
+                                <img src="assets/img/icons/newsletter.png" alt="Icon">
+                            </div>
+                            <h4 class="h5 text-white font-theme3 mb-3">Get newsletter</h4>
+                            <input type="email" class="form-control" placeholder="Enter email">
+                            <button type="submit">Subscribe Now</button>
+                        </form>
+                    </div>
+                    <div class="vs-sidebox bg-major-black">
+                        <h3 class="sidebox-title text-white h5">Recent viewed</h3>
+                        <div class="post-thumb-style1">
+                            <div class="vs-blog d-flex gap-3">
+                                <div class="media-img">
+                                    <a href="blog-details.html"><img src="assets/img/widget/recent-post-1-1.png"
+                                            alt="Recent Post"></a>
+                                </div>
+                                <div class="media-body align-self-center">
+                                    <h4 class="h5 blog-title font-theme lh-base text-white mb-0"><a
+                                            href="blog-details.html">The General Sery vice Administr</a></h4>
+                                    <div class="blog-meta text-light fs-xs mt-1">
+                                        <a href="blog.html"><i class="fal fa-calendar-alt"></i>June 21, 2025</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vs-blog d-flex gap-3">
+                                <div class="media-img">
+                                    <a href="blog-details.html"><img src="assets/img/widget/recent-post-1-2.png"
+                                            alt="Recent Post"></a>
+                                </div>
+                                <div class="media-body align-self-center">
+                                    <h4 class="h5 blog-title font-theme lh-base text-white mb-0"><a
+                                            href="blog-details.html">The strength of lorem ipsum</a></h4>
+                                    <div class="blog-meta text-light fs-xs mt-1">
+                                        <a href="blog.html"><i class="fal fa-calendar-alt"></i>July 21, 2025</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vs-blog d-flex gap-3">
+                                <div class="media-img">
+                                    <a href="blog-details.html"><img src="assets/img/widget/recent-post-1-3.png"
+                                            alt="Recent Post"></a>
+                                </div>
+                                <div class="media-body align-self-center">
+                                    <h4 class="h5 blog-title font-theme lh-base text-white mb-0"><a
+                                            href="blog-details.html">Lorem ipsum is so ubiqu because</a></h4>
+                                    <div class="blog-meta text-light fs-xs mt-1">
+                                        <a href="blog.html"><i class="fal fa-calendar-alt"></i>June 21, 2025</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vs-blog d-flex gap-3">
+                                <div class="media-img">
+                                    <a href="blog-details.html"><img src="assets/img/widget/recent-post-1-4.png"
+                                            alt="Recent Post"></a>
+                                </div>
+                                <div class="media-body align-self-center">
+                                    <h4 class="h5 blog-title font-theme lh-base text-white mb-0"><a
+                                            href="blog-details.html">But despite zealous cries the demise</a></h4>
+                                    <div class="blog-meta text-light fs-xs mt-1">
+                                        <a href="blog.html"><i class="fal fa-calendar-alt"></i>Augest 21, 2025</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--==============================
+    Video Area
+    ============================== -->
+    <div class="vs-video-area bg-dark pt-60 pb-30" data-bg-src="assets/img/bg/video-bg-1-1.jpg" data-overlay="dark"
+        data-opacity="9">
+        <div class="container">
+            <h2 class="h4 text-white font-theme3 mt-md-n2 mb-4 z-index-common">video news</h2>
+            <div class="row vs-carousel z-index-common arrow-margin arrow-white" data-slide-show="3"
+                data-md-slide-show="2" data-sm-slide-show="2" data-xs-slide-show="1" data-arrows="true">
+                <div class="col-lg-4">
+                    <div class="vs-blog position-relative mb-25">
+                        <div class="blog-image image-scale-hover">
+                            <a href="blog-details.html"><img src="assets/img/blog/blog-img-3-1.jpg"
+                                    alt="Blog Image"></a>
+                            <div class="position-absolute top-0 end-0 pt-20 pr-20"><a
+                                    href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="popup-video play-btn"><i
+                                        class="fas fa-play"></i></a></div>
+                        </div>
+                        <div class="blog-content mt-15">
+                            <h3 class="blog-title font-theme text-white lh-base fs-20 mb-1"><a
+                                    href="blog-details.html">Hundreds of demonstrator march against the death</a></h3>
+                            <div class="blog-meta text-light fs-xs">
+                                <a href="blog.html"><i class="fal fa-calendar-alt"></i>June 21, 2025</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="vs-blog position-relative mb-25">
+                        <div class="blog-image image-scale-hover">
+                            <a href="blog-details.html"><img src="assets/img/blog/blog-img-3-2.jpg"
+                                    alt="Blog Image"></a>
+                            <div class="position-absolute top-0 end-0 pt-20 pr-20"><a
+                                    href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="popup-video play-btn"><i
+                                        class="fas fa-play"></i></a></div>
+                        </div>
+                        <div class="blog-content mt-15">
+                            <h3 class="blog-title font-theme text-white lh-base fs-20 mb-1"><a
+                                    href="blog-details.html">But despite zealous cries for the demise lorem ipsum
+                                    keep</a></h3>
+                            <div class="blog-meta text-light fs-xs">
+                                <a href="blog.html"><i class="fal fa-calendar-alt"></i>June 21, 2025</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="vs-blog position-relative mb-25">
+                        <div class="blog-image image-scale-hover">
+                            <a href="blog-details.html"><img src="assets/img/blog/blog-img-3-3.jpg"
+                                    alt="Blog Image"></a>
+                            <div class="position-absolute top-0 end-0 pt-20 pr-20"><a
+                                    href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="popup-video play-btn"><i
+                                        class="fas fa-play"></i></a></div>
+                        </div>
+                        <div class="blog-content mt-15">
+                            <h3 class="blog-title font-theme text-white lh-base fs-20 mb-1"><a
+                                    href="blog-details.html">Generally, lorem ipsum is best suited to keeping lore </a>
+                            </h3>
+                            <div class="blog-meta text-light fs-xs">
+                                <a href="blog.html"><i class="fal fa-calendar-alt"></i>June 21, 2025</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="vs-blog position-relative mb-25">
+                        <div class="blog-image image-scale-hover">
+                            <a href="blog-details.html"><img src="assets/img/blog/blog-img-3-4.jpg"
+                                    alt="Blog Image"></a>
+                            <div class="position-absolute top-0 end-0 pt-20 pr-20"><a
+                                    href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="popup-video play-btn"><i
+                                        class="fas fa-play"></i></a></div>
+                        </div>
+                        <div class="blog-content mt-15">
+                            <h3 class="blog-title font-theme text-white lh-base fs-20 mb-1"><a
+                                    href="blog-details.html">So when is it okay to use lorem ipsum? First of caution
+                                </a></h3>
+                            <div class="blog-meta text-light fs-xs">
+                                <a href="blog.html"><i class="fal fa-calendar-alt"></i>June 21, 2025</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==============================
+    Popular News
+    ============================== -->
+    <section class="vs-popular-news bg-light-dark pt-60 pb-40">
+        <div class="container">
+            <h2 class="h4 text-white font-theme3 mt-md-n2 mb-4 z-index-common">Popular News</h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="vs-blog d-md-flex gap-4 mb-20 hover_media_img">
+                        <div class="media-img mb-10 mb-md-0">
+                            <a href="blog-details.html"><img class="w-100" src="assets/img/popular/popular-img-1-1.jpg"
+                                    alt="Popular Image"></a>
+                        </div>
+                        <div class="media-body align-self-center">
+                            <div class="blog-meta">
+                                <a href="blog.html"><i class="fal fa-calendar-alt"></i>June 21, 2025</a>
+                                <a href="blog.html"><i class="fal fa-user"></i>Admin</a>
+                            </div>
+                            <h3 class="blog-title font-theme"><a href="blog-details.html">What better way to celebrate
+                                    the holidays than by finding a spot that evokes</a></h3>
+                            <p class="mb-0 text-white">What better way to celebrate the holidays than by finding a spot
+                                that
+                                evokes the nostalgia so many of us seek out at Christmastime, from
+                                sleigh rides to visits from Santa? There are little Christmas</p>
+                        </div>
+                    </div>
+                    <div class="vs-blog d-md-flex gap-4 mb-20 hover_media_img">
+                        <div class="media-img mb-10 mb-md-0">
+                            <a href="blog-details.html"><img class="w-100" src="assets/img/popular/popular-img-1-2.jpg"
+                                    alt="Popular Image"></a>
+                        </div>
+                        <div class="media-body align-self-center">
+                            <div class="blog-meta">
+                                <a href="blog.html"><i class="fal fa-calendar-alt"></i>June 21, 2025</a>
+                                <a href="blog.html"><i class="fal fa-user"></i>Admin</a>
+                            </div>
+                            <h3 class="blog-title font-theme"><a href="blog-details.html">Coming full circle, the
+                                    internet's remixing of the now infamous lorem passage</a></h3>
+                            <p class="mb-0 text-white">What better way to celebrate the holidays than by finding a spot
+                                that
+                                evokes the nostalgia so many of us seek out at Christmastime, from
+                                sleigh rides to visits from Santa? There are little Christmas</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="vs-sidebox bg-major-black">
+                        <h3 class="sidebox-title text-white h5">Categories</h3>
+                        <ul class="vs-cat-list1">
+                            <li><a href="blog.html">Football <span class="cat-number">10</span></a></li>
+                            <li><a href="blog.html">baseball <span class="cat-number">07</span></a></li>
+                            <li><a href="blog.html">basketball <span class="cat-number">05</span></a></li>
+                            <li><a href="blog.html">esports <span class="cat-number">02</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="bg-light-dark">
+        <div class="container">
+            <div class="position-relative row text-center add-banner"
+                data-bg-src="assets/img/call_to_action/call_to_action-1.jpg">
+                <div class="col-auto mx-auto">
+                    <span class="banner-title">make offer</span>
+                    <h2 class="section-title">get 70% offer discount</h2>
+                    <a href="contact.html" class="vs-btn style1">get offers</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==============================
+    Video Area
+    ============================== -->
+    <div class="vs-video-area bg-light-dark pt-60 newsletter-medium-pb">
+        <div class="container">
+            <h2 class="h4 text-white font-theme3 mt-md-n2 mb-4">news insights</h2>
+            <div class="row vs-carousel multibg-color-cat  arrow-margin arrow-white" data-slide-show="3"
+                data-md-slide-show="2" data-sm-slide-show="2" data-xs-slide-show="1" data-arrows="true">
+                <div class="col-lg-4 vs-blog mb-25">
+                    <div class="position-relative">
+                        <div class="blog-image">
+                            <a href="blog-details.html"><img src="assets/img/blog/blog-img-4-3.jpg"
+                                    alt="Blog Image"></a>
+                            <div class="blog-category">
+                                <a href="blog.html">Action</a>
+                            </div>
+                        </div>
+                        <div class="blog-content mt-15">
+                            <h3 class="blog-title font-theme text-white lh-base fs-20 mb-1"><a
+                                    href="blog-details.html">Hundreds of demonstrator march against the death</a></h3>
+                            <div class="blog-meta text-light fs-xs">
+                                <a href="blog.html"><i class="fal fa-calendar-alt"></i>June 21, 2025</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 vs-blog mb-25">
+                    <div class="position-relative">
+                        <div class="blog-image">
+                            <a href="blog-details.html"><img src="assets/img/blog/blog-img-4-4.jpg"
+                                    alt="Blog Image"></a>
+                            <div class="blog-category">
+                                <a href="blog.html">Cricket</a>
+                            </div>
+                        </div>
+                        <div class="blog-content mt-15">
+                            <h3 class="blog-title font-theme text-white lh-base fs-20 mb-1"><a
+                                    href="blog-details.html">But despite zealous cries for the demise lorem ipsum
+                                    keep</a></h3>
+                            <div class="blog-meta text-light fs-xs">
+                                <a href="blog.html"><i class="fal fa-calendar-alt"></i>June 21, 2025</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 vs-blog mb-25">
+                    <div class="position-relative">
+                        <div class="blog-image">
+                            <a href="blog-details.html"><img src="assets/img/blog/blog-img-4-1.jpg"
+                                    alt="Blog Image"></a>
+                            <div class="blog-category">
+                                <a href="blog.html">Football</a>
+                            </div>
+                        </div>
+                        <div class="blog-content mt-15">
+                            <h3 class="blog-title font-theme text-white lh-base fs-20 mb-1"><a
+                                    href="blog-details.html">Generally, lorem ipsum is best suited to keeping lore</a>
+                            </h3>
+                            <div class="blog-meta text-light fs-xs">
+                                <a href="blog.html"><i class="fal fa-calendar-alt"></i>June 21, 2025</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 vs-blog mb-25">
+                    <div class="position-relative">
+                        <div class="blog-image">
+                            <a href="blog-details.html"><img src="assets/img/blog/blog-img-4-2.jpg"
+                                    alt="Blog Image"></a>
+                            <div class="blog-category">
+                                <a href="blog.html">Classic</a>
+                            </div>
+                        </div>
+                        <div class="blog-content mt-15">
+                            <h3 class="blog-title font-theme text-white lh-base fs-20 mb-1"><a
+                                    href="blog-details.html">So when is it okay to use lorem ipsum? First of caution</a>
+                            </h3>
+                            <div class="blog-meta text-light fs-xs">
+                                <a href="blog.html"><i class="fal fa-calendar-alt"></i>June 21, 2025</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
