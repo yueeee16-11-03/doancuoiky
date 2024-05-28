@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("dona")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5bcc41bb069b4748392c37a3180c27aaebfe24c")]
 [assembly: System.Reflection.AssemblyProductAttribute("dona")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dona")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

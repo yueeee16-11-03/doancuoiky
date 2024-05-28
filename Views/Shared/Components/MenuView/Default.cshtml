@@ -1,4 +1,7 @@
+@using dona.Model;
+@using dona.Utilities;
 @model IList<tblMenu>
+
 <div class="sticky-header-wrap sticky-header bg-black py-1 py-sm-2 py-lg-1">
     <div class="container position-relative">
         <div class="row align-items-center">
@@ -10,18 +13,21 @@
             <div class="col-7 col-md-9 text-end position-static">
                 <nav class="main-menu menu-sticky1 d-none d-lg-block link-inherit">
                     <ul>
-                        @foreach(var menu in Model.Where(m => m.Levers == 1).OrderBy(m => m.MenuOrder))
+                        @foreach(var menu in Model.Where(m => m.Levels == 1).OrderBy(m => m.MenuOrder))
                         {
+                            string url=Functions.TitleSlugGeneration("menu",menu.MenuName,menu.MenuID);
+                            
                             var pID = menu.MenuID;
                             var sMenu = Model.Where(s => s.ParentID == pID).OrderBy(s => s.MenuOrder).ToList();
                             <li class="menu-item-has-children">
-                                <a href="#">@menu.MenuName</a>
+                                <a asp-controller="@menu.ControllerName" asp-action="@menu.ActionName">@menu.MenuName</a>
+                                
                                 @if (sMenu.Any())
                                 {
                                     <ul class="sub-menu">
                                         @foreach (var smn in sMenu)
                                         {
-                                            <li><a href="#">@smn.MenuName</a></li>
+                                            <li><a asp-controller="@menu.ControllerName" asp-action="@menu.ActionName">@menu.MenuName >@smn.MenuName</a></li>
                                         }
                                     </ul>
                                 }
@@ -179,12 +185,12 @@
                 <div class="col-6 col-lg-8 col-xl-6 offset-lg-4 offset-xl-0 text-end text-xl-start">
                     <nav class="main-menu menu-style2 mobile-menu-active" data-expand="992">
                         <ul>
-                            @foreach(var menu in Model.Where(m => m.Levers == 1).OrderBy(m => m.MenuOrder))
+                            @foreach(var menu in Model.Where(m => m.Levels == 1).OrderBy(m => m.MenuOrder))
                             {
                                 var pID = menu.MenuID;
                                 var sMenu = Model.Where(s => s.ParentID == pID).OrderBy(s => s.MenuOrder).ToList();
                                 <li class="menu-item-has-children">
-                                    <a href="#">@menu.MenuName</a>
+                                    <a href="">@menu.MenuName</a>
                                     @if (sMenu.Any())
                                     {
                                         <ul class="sub-menu">

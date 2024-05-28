@@ -1,0 +1,77 @@
+@using dona.Models;
+@using PagedList.Core.Mvc;
+@using dona.Model
+@model PagedList.Core.IPagedList<tblChampions>
+    
+    @{
+        Layout="~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    }
+    <main id="main"class ="main">
+        <div class="pagetitle">
+            <h2>List of Champions</h2>
+            <div class="col-4">
+                <a type="button" class="btn btn-success"asp-area="Admin"asp-controller="Champions"asp-action="Create">
+    <i class="bi bi-file-earmark-text me-1"></i>Add a new Champions
+</a>
+            </div>
+            <div class="col-8">
+                <div>
+                    <ul class ="pagination float-erd">
+                        <pager class="pager-container" options="@PagedListRenderOptions.Bootstrap4PageNumbersOnly" list="@Model"></pager>
+                    </ul>
+                    </div>
+            </div>
+        </div>
+
+                <section class ="section dashboard">
+                        <div class="row">
+    
+                            <div  class="col-12">
+    
+                                <div class="card recent-sales overflow-auto">
+                                    <div class="card-body mt-4 ">
+                                        <table class="table table-borderless datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th class="col-1 text-center">ChampionID</th>
+                                                     <th class="col-4 text-center">NameChampions</th>
+                                                      <th class="col-2 text-center"> Funtions</th>
+                                                      <th class="col-2 text-center">Images</th>
+                                                           
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach(var item in Model)
+                                                {
+                                                    <tr>
+                                                       
+                                                <td class="text-center" scope="row">@item.ChampionsID</td>   
+                                                <td class="text-left text-primary"scope="row">
+                                                   
+                                                   <a  asp-controller="Post"asp-action="Details"
+                                                asp-route-id="@item.ChampionsID" class="text-primary">@item.NameChampions</a>
+                                                </td>
+                                                <td class="text-center" scope="row">
+                                                    <a asp-area="Admin"asp-controller="Champions" asp-action="Edit"
+                                                asp-route-id="@item.ChampionsID" class="btn btn-primary btn-sm" title="Edit the Post"><i class="bi bi-pencil"></i></a>
+                                                    <a asp-area="Admin" asp-controller="Champions" asp-action="Delete"
+                                                asp-route-id="@item.ChampionsID" class="btn btn-danger btn-sm" title="Delete the Post"><i class="bi bi-trash"></i></a>
+                                                 
+                                                        <td class="text-center" scope="row">
+                                                                 <div class="circle-image">
+                                                                      <img src="@item.Images" alt="Post Image" class="responsive-image" style="max-width:50px ;height: auto; "/>
+                                                                       </div>
+                                                                         </td>   
+                                                </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+             
+        </div>
+    </main>

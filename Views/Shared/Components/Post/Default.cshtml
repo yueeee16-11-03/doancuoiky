@@ -1,5 +1,7 @@
 @using dona.Model;
+@using dona.Utilities;
 @model IList<viewPostMenu>
+    
 <div class="hero-layout3">
     <div class="row vs-carousel" data-arrows="false" data-dots="false" data-fade="true">
         <div class="hero-inner">
@@ -50,19 +52,21 @@
             var threenew= Model.Take(5).ToList();
                 foreach (var item in threenew)
                 {
+                    string url=Functions.TitleSlugGeneration("post",item.Title,item.PostID);
                 <div class="vs-blog col-xl-3">
                     <div class="position-relative">
-                        <a href="blog-details.html" class="overlay overlay-lg"></a>
+                        <a href="/@url" class="overlay overlay-lg"></a>
                         <div class="blog-image">
                             <img src="@item.Images" alt="Featured Blog Image" class="w-100">
                         </div>
                         <div class="blog-content pos-bottom">
                             <div class="blog-category mb-1">
-                                <a href="blog.html">@item.MenuName</a>
+                                <a href="/@url">@item.MenuName</a>
                             </div>
-                            <h3 class="blog-title h5 text-white font-theme lh-base mb-2"><a href="blog-details.html">@item.Title</a></h3>
+                            
+                            <h3 class="blog-title h5 text-white font-theme lh-base mb-2"><a href="/@url">@item.Title</a></h3>
                             <div class="blog-meta text-light-white fs-xs ">
-                                <a href="blog.html"><i class="fal fa-calendar-alt"></i>@item.createted_Date </a>
+                                <a href="/@url"><i class="fal fa-calendar-alt"></i>@item.createted_Date </a>
                             </div>
                         </div>
                     </div>
@@ -74,96 +78,134 @@
     </div>
 </section>
 
-    <!--==============================
-    News Area
-    ==============================-->
-    <section class="vs-news-area bg-light-dark pb-30">
+    
+    
+     <section class="vs-news-area bg-light-dark pb-30">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <h2 class="h4 text-white font-theme3 mt-md-n1 mb-4">HOT NEWS</h2>
+                    <h2 class="h4 text-white font-theme3 mt-md-n1 mb-4">Trending News</h2>
                     <div class="row pb-30">
                         <div class="col-md-6 ">
                             <div class="multibg-color-cat pos_bottom_hover feature-new-style1 vs-carousel  "
                                 data-slide-show="1">
-                                @{
+                                  @{
                                    var threennes= Model.ToList();
                                       foreach (var test in threennes)
                                     {
+                                        string url=Functions.TitleSlugGeneration("post",test.Title,test.PostID);
                                <div class="position-relative vs-blog"style="max-width: 380px;height:420px;">
-                                    <a href="blog-details.html" class="overlay overlay-lg"></a>
+                                    <a href="/@url" class="overlay overlay-lg"></a>
                                     <div class="blog-image">
-                                        <img src="@test.Images" alt="Latest Blog Image"
-                                            class="w-100">
+                                        <img src="@test.Images" alt="/@url"
+                                            class="w-100"class="responsive-image">
                                     </div>
                                     <div class="blog-content pos-bottom">
                                         <div class="blog-category mb-1">
-                                            <a href="blog.html">@test.MenuName</a>
+                                            <a href="/@url">@test.MenuName</a>
                                         </div>
                                         <h3 class="blog-title h5 text-white font-theme lh-base mb-2"><a
-                                                href="blog-details.html">@test.Title
+                                                href="/@url">@test.Title
                                                 </a></h3>
                                         <div class="blog-meta text-light-white fs-xs ">
-                                            <a href="blog.html"><i class="fal fa-calendar-alt"></i>@test.createted_Date</a>
-                                            <a href="blog.html"><i class="fal fa-user"></i>@test.author</a>
+                                            <a href="/@url"><i class="fal fa-calendar-alt"></i>@test.createted_Date</a>
+                                            <a href="/@url"><i class="fal fa-user"></i>@test.author</a>
                                         </div>
                                     </div>
                                 </div>
                                   
                             }
                                     }
+
+                                
+                               
                             </div>
                         </div>
-                        
                         <div class="col-md-6">
                             <div class="post-thumb-style1  ">
-                                @{   var faker= Model.Take(4).ToList();
+                               @{   var faker= Model.Take(4).ToList();
                                       foreach (var test in faker)
                                     {
+                                         string url=Functions.TitleSlugGeneration("post",test.Title,test.PostID);
                                 <div class="vs-blog d-flex gap-3"style="max-width: 330px;height:100px;">
                                     <div class="media-img">
-                                        <a href="blog-details.html"><img src="@test.Images"
-                                                alt="Recent Post" class="img-fluid h-w-120" style="max-width: 100px; height: auto;"></a>
+                                        <a href="/@url"><img src="@test.Images"
+                                                alt="Recent Post" class="responsive-image"class="img-fluid h-w-120" style="max-width: 100px; height: auto;"></a>
                                     </div>
                                     <div class="media-body align-self-center">
                                         <div class="blog-category">
-                                            <a href="blog.html"style="font-size: 14px;">@test.MenuName</a>
+                                            <a href="/@url"style="font-size: 14px;">@test.MenuName</a>
                                         </div>
                                         <h4 class="h5 blog-title font-theme lh-base text-white mb-0"><a
-                                                href="blog-details.html" style="font-size: 18px;">@test.Title</a></h4>
+                                                href="/@url" style="font-size: 18px;">@test.Title</a></h4>
                                     </div>
                                 </div>
                                 }
                                 }
-                                </div>
+
+                               
+                                
+                                
                             </div>
                         </div>
                     </div>
                     <h2 class="h4 text-white font-theme3 mt-md-n1 mb-4">most viewed</h2>
                     <div class="multibg-color-cat mb-55">
-                        @{   var keria= Model.Take(4).ToList();
+                         @{   var keria= Model.Take(6).ToList();
                                       foreach (var test in keria)
                                     {
+                                         string url=Functions.TitleSlugGeneration("post",test.Title,test.PostID);
                         <div class="vs-blog bg-major-black mb-20 hover_div"style="max-width: 710px;height:207.71px">
                             <div class="row gx-xl-5">
                                 <div class="col-md-6">
                                     <div class="blog-image">
-                                        <a href="blog-details.html"><img class="w-100" style="max-width: 331.4px; height: 207.71px;"
+                                        <a href="/@url"><img class="w-100" style="max-width: 331.4px; height: 207.71px;"
                                                 src="@test.Images" alt="Blog Image"></a>
                                     </div>
                                 </div>
                                 <div class="col-md-6 align-self-center">
                                     <div class="blog-conent pt-25 pb-20 px-30 px-md-0 pe-xl-5">
                                         <div class="blog-category mb-1">
-                                            <a href="blog.html" style="font-size: 14px;">@test.MenuName</a>
+                                            <a href="/@url" style="font-size: 14px;">@test.MenuName</a>
                                         </div>
                                         <h3 class="blog-title text-white font-theme h5"><a
-                                                href="blog-details.html"style="font-size: 18px;">@test.Title
+                                                href="/@url"style="font-size: 18px;">@test.Title
                                                 </a></h3>
                                         <div class="blog-meta text-light fs-xs">
-                                            <a href="blog.html"><i class="fal fa-calendar-alt"></i>@test.createted_Date</a>
-                                            <a href="blog.html"><i class="fal fa-user"></i>@test.author</a>
+                                            <a href="/@url"><i class="fal fa-calendar-alt"></i>@test.createted_Date</a>
+                                            <a href="/@url"><i class="fal fa-user"></i>@test.author</a>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        }   
+                        }
+                        
+
+                       
+                    </div>
+                    <h2 class="h4 text-white font-theme3 mt-md-n1 mb-4">recent News</h2>
+                    <div class="post-thumb-style1 row  ">
+                        @{   var ngu= Model.Take(4).ToList();
+                                      foreach (var test in ngu)
+                                    {
+                                        string url=Functions.TitleSlugGeneration("post",test.Title,test.PostID);
+
+                        <div class="col-md-6 vs-blog">
+                            <div class=" d-flex gap-3">
+                                <div class="media-img">
+                                    <a href="/@url"><img src="@test.Images"
+                                            alt="Recent Post"class="responsive-image"style="max-width: 100px;height:100px"></a>
+                                </div>
+                                <div class="media-body align-self-center">
+                                    <div class="blog-category">
+                                        <a href="/@url">@test.MenuName</a>
+                                    </div>
+                                    <h4 class="h5 blog-title font-theme lh-base text-white mb-0"><a
+                                            href="/@url">@test.Title</a></h4>
+                                    <div class="blog-meta text-light fs-xs mt-1">
+                                        <a href="/@url"><i class="fal fa-calendar-alt"></i>@test.createted_Date</a>
                                     </div>
                                 </div>
                             </div>
@@ -172,14 +214,10 @@
                         }
                         
                         
+                        
                     </div>
-
-                    
                 </div>
-                <style>
-   
-</style>
-                <div class="col-lg-4 col-lg-offset-8"style="max-width: 33%;height:33%;" >
+                <div class="col-lg-4">
                     <div class="vs-sidebox bg-major-black">
                         <h3 class="sidebox-title text-white h5">Social Connect</h3>
                         <ul class="links-stretch">
@@ -228,67 +266,38 @@
                     <div class="vs-sidebox bg-major-black">
                         <h3 class="sidebox-title text-white h5">Recent viewed</h3>
                         <div class="post-thumb-style1">
+                             @{   var con= Model.Take(4).ToList();
+                                      foreach (var test in con)
+                                    {
+
+ string url=Functions.TitleSlugGeneration("post",test.Title,test.PostID);
                             <div class="vs-blog d-flex gap-3">
                                 <div class="media-img">
-                                    <a href="blog-details.html"><img src="assets/img/widget/recent-post-1-1.png"
-                                            alt="Recent Post"></a>
+                                    <a href="/@url"><img src="@test.Images"
+                                            alt="Recent Post"class="responsive-image"style="max-width: 90px;height:90px"></a>
                                 </div>
                                 <div class="media-body align-self-center">
                                     <h4 class="h5 blog-title font-theme lh-base text-white mb-0"><a
-                                            href="blog-details.html">The General Sery vice Administr</a></h4>
+                                            href="/@url">@test.Title</a></h4>
                                     <div class="blog-meta text-light fs-xs mt-1">
-                                        <a href="blog.html"><i class="fal fa-calendar-alt"></i>June 21, 2025</a>
+                                        <a href="/@url"><i class="fal fa-calendar-alt"></i>@test.createted_Date</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="vs-blog d-flex gap-3">
-                                <div class="media-img">
-                                    <a href="blog-details.html"><img src="assets/img/widget/recent-post-1-2.png"
-                                            alt="Recent Post"></a>
-                                </div>
-                                <div class="media-body align-self-center">
-                                    <h4 class="h5 blog-title font-theme lh-base text-white mb-0"><a
-                                            href="blog-details.html">The strength of lorem ipsum</a></h4>
-                                    <div class="blog-meta text-light fs-xs mt-1">
-                                        <a href="blog.html"><i class="fal fa-calendar-alt"></i>July 21, 2025</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="vs-blog d-flex gap-3">
-                                <div class="media-img">
-                                    <a href="blog-details.html"><img src="assets/img/widget/recent-post-1-3.png"
-                                            alt="Recent Post"></a>
-                                </div>
-                                <div class="media-body align-self-center">
-                                    <h4 class="h5 blog-title font-theme lh-base text-white mb-0"><a
-                                            href="blog-details.html">Lorem ipsum is so ubiqu because</a></h4>
-                                    <div class="blog-meta text-light fs-xs mt-1">
-                                        <a href="blog.html"><i class="fal fa-calendar-alt"></i>June 21, 2025</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="vs-blog d-flex gap-3">
-                                <div class="media-img">
-                                    <a href="blog-details.html"><img src="assets/img/widget/recent-post-1-4.png"
-                                            alt="Recent Post"></a>
-                                </div>
-                                <div class="media-body align-self-center">
-                                    <h4 class="h5 blog-title font-theme lh-base text-white mb-0"><a
-                                            href="blog-details.html">But despite zealous cries the demise</a></h4>
-                                    <div class="blog-meta text-light fs-xs mt-1">
-                                        <a href="blog.html"><i class="fal fa-calendar-alt"></i>Augest 21, 2025</a>
-                                    </div>
-                                </div>
-                            </div>
+                            }
+                            }
+                            
+                            
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--==============================
-    Video Area
-    ============================== -->
+    
+    
+  
     <div class="vs-video-area bg-dark pt-60 pb-30" data-bg-src="assets/img/bg/video-bg-1-1.jpg" data-overlay="dark"
         data-opacity="9">
         <div class="container">

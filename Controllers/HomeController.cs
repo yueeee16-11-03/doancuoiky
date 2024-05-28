@@ -7,15 +7,28 @@ namespace dona.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+private readonly Datacontext _context;
+    public HomeController(ILogger<HomeController> logger,Datacontext context)
     {
         _logger = logger;
+        _context= context;
     }
 
     public IActionResult Index()
     {
         return View();
+    }
+    public IActionResult Champions(){
+        return View();
+        }
+
+[Route("/post-{slug}-{id:long}.html" ,Name="Details")]
+public IActionResult Details (long? id)
+{
+    if(id==null)return NotFound();
+    var post=_context.ViewPostMenus.FirstOrDefault(m=>(m.PostID==id)&& (m.IsActive==true));
+    if(post==null) return NotFound();
+    return View(post);
     }
 
     public IActionResult Privacy()

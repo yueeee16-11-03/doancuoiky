@@ -22,6 +22,580 @@ namespace dona.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("dona.Areas.Admin.Models.AdminMenu", b =>
+                {
+                    b.Property<long?>("AdminMenuID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long?>("AdminMenuID"));
+
+                    b.Property<string>("ActionName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AreaName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ControllerName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Icon")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IdName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ItemLever")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ItemName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ItemOrder")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ItemTarget")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ParentLever")
+                        .HasColumnType("int");
+
+                    b.HasKey("AdminMenuID");
+
+                    b.ToTable("AdminMenu");
+
+                    b.HasData(
+                        new
+                        {
+                            AdminMenuID = 1L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Home",
+                            IsActive = false,
+                            ItemLever = 0,
+                            ItemName = "Dashboard",
+                            ItemOrder = 1,
+                            ParentLever = 0
+                        },
+                        new
+                        {
+                            AdminMenuID = 2L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Home",
+                            IsActive = false,
+                            ItemLever = 0,
+                            ItemName = "Profile",
+                            ItemOrder = 1,
+                            ParentLever = 0
+                        },
+                        new
+                        {
+                            AdminMenuID = 3L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Home",
+                            IsActive = false,
+                            ItemLever = 0,
+                            ItemName = "Directions",
+                            ItemOrder = 2,
+                            ParentLever = 0
+                        },
+                        new
+                        {
+                            AdminMenuID = 4L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Home",
+                            IsActive = false,
+                            ItemLever = 0,
+                            ItemName = "Contact",
+                            ItemOrder = 3,
+                            ParentLever = 0
+                        },
+                        new
+                        {
+                            AdminMenuID = 5L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Home",
+                            IsActive = false,
+                            ItemLever = 0,
+                            ItemName = "Log out",
+                            ItemOrder = 4,
+                            ParentLever = 0
+                        },
+                        new
+                        {
+                            AdminMenuID = 6L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Home",
+                            Icon = "bi bi-menu-button-wide",
+                            IdName = "components-nav",
+                            IsActive = true,
+                            ItemLever = 1,
+                            ItemName = "Post Management",
+                            ItemOrder = 1,
+                            ItemTarget = "components-nav",
+                            ParentLever = 0
+                        },
+                        new
+                        {
+                            AdminMenuID = 7L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Post",
+                            IsActive = true,
+                            ItemLever = 2,
+                            ItemName = "Update Post",
+                            ItemOrder = 1,
+                            ParentLever = 6
+                        },
+                        new
+                        {
+                            AdminMenuID = 8L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Home",
+                            Icon = "bi bi-clipboard-data",
+                            IdName = "Champions",
+                            IsActive = true,
+                            ItemLever = 1,
+                            ItemName = "Champions Management",
+                            ItemOrder = 4,
+                            ItemTarget = "Champions",
+                            ParentLever = 0
+                        },
+                        new
+                        {
+                            AdminMenuID = 9L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Home",
+                            IsActive = true,
+                            ItemLever = 2,
+                            ItemName = "Published Posts",
+                            ItemOrder = 3,
+                            ParentLever = 6
+                        },
+                        new
+                        {
+                            AdminMenuID = 10L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Home",
+                            Icon = "bi bi-journal-text",
+                            IdName = "forms-nav",
+                            IsActive = true,
+                            ItemLever = 1,
+                            ItemName = "Menu Management",
+                            ItemOrder = 1,
+                            ItemTarget = "forms-nav",
+                            ParentLever = 0
+                        },
+                        new
+                        {
+                            AdminMenuID = 11L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Menu",
+                            IsActive = true,
+                            ItemLever = 2,
+                            ItemName = "Add New Menu",
+                            ItemOrder = 1,
+                            ParentLever = 10
+                        },
+                        new
+                        {
+                            AdminMenuID = 12L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Home",
+                            IsActive = true,
+                            ItemLever = 2,
+                            ItemName = "Edit Menu",
+                            ItemOrder = 2,
+                            ParentLever = 10
+                        },
+                        new
+                        {
+                            AdminMenuID = 13L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Home",
+                            Icon = "bi bi-bar-chart",
+                            IdName = "charts-nav",
+                            IsActive = true,
+                            ItemLever = 1,
+                            ItemName = "Slide Management ",
+                            ItemOrder = 1,
+                            ItemTarget = "charts-nav",
+                            ParentLever = 0
+                        },
+                        new
+                        {
+                            AdminMenuID = 14L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Home",
+                            IsActive = true,
+                            ItemLever = 2,
+                            ItemName = "Add New Slide",
+                            ItemOrder = 1,
+                            ParentLever = 13
+                        },
+                        new
+                        {
+                            AdminMenuID = 15L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Home",
+                            IsActive = true,
+                            ItemLever = 2,
+                            ItemName = "Edit Slide",
+                            ItemOrder = 2,
+                            ParentLever = 13
+                        },
+                        new
+                        {
+                            AdminMenuID = 16L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Champions",
+                            IsActive = true,
+                            ItemLever = 2,
+                            ItemName = "Champions",
+                            ItemOrder = 2,
+                            ParentLever = 8
+                        },
+                        new
+                        {
+                            AdminMenuID = 17L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Path",
+                            IsActive = true,
+                            ItemLever = 2,
+                            ItemName = "Path",
+                            ItemOrder = 1,
+                            ParentLever = 8
+                        },
+                        new
+                        {
+                            AdminMenuID = 18L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Skills",
+                            IsActive = true,
+                            ItemLever = 2,
+                            ItemName = "Skill",
+                            ItemOrder = 2,
+                            ParentLever = 8
+                        },
+                        new
+                        {
+                            AdminMenuID = 19L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Skins",
+                            IsActive = true,
+                            ItemLever = 2,
+                            ItemName = "Skin",
+                            ItemOrder = 3,
+                            ParentLever = 8
+                        },
+                        new
+                        {
+                            AdminMenuID = 20L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Home",
+                            Icon = "bi bi-controller",
+                            IdName = "Games",
+                            IsActive = true,
+                            ItemLever = 1,
+                            ItemName = "Games Management",
+                            ItemOrder = 5,
+                            ItemTarget = "Games",
+                            ParentLever = 0
+                        },
+                        new
+                        {
+                            AdminMenuID = 21L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Game",
+                            IsActive = true,
+                            ItemLever = 2,
+                            ItemName = "Games",
+                            ItemOrder = 3,
+                            ParentLever = 20
+                        },
+                        new
+                        {
+                            AdminMenuID = 22L,
+                            ActionName = "Index",
+                            AreaName = "Admin",
+                            ControllerName = "Lane",
+                            IsActive = true,
+                            ItemLever = 2,
+                            ItemName = "Lane",
+                            ItemOrder = 3,
+                            ParentLever = 20
+                        });
+                });
+
+            modelBuilder.Entity("dona.Model.tblChampions", b =>
+                {
+                    b.Property<long>("ChampionsID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("ChampionsID"));
+
+                    b.Property<string>("Decription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Images")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Link")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameChampions")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("PathID")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("author")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("createted_Date")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("ChampionsID");
+
+                    b.ToTable("tblChampions");
+                });
+
+            modelBuilder.Entity("dona.Model.tblGames", b =>
+                {
+                    b.Property<long>("GameID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("GameID"));
+
+                    b.Property<long?>("ChampionsID")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Decriptions_title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Images")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Lane")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Link")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameChampions")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("author")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("createted_Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("decriptions_lane")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("GameID");
+
+                    b.HasIndex("ChampionsID");
+
+                    b.ToTable("tblGames");
+                });
+
+            modelBuilder.Entity("dona.Model.tblLane", b =>
+                {
+                    b.Property<long>("LaneID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("LaneID"));
+
+                    b.Property<string>("Decriptions_Lane")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("GameID")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("GamesGameID")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Images")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Link")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameLane")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("author")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("createted_Date")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("LaneID");
+
+                    b.HasIndex("GamesGameID");
+
+                    b.ToTable("tblLane");
+                });
+
+            modelBuilder.Entity("dona.Model.tblPath", b =>
+                {
+                    b.Property<long>("PathID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("PathID"));
+
+                    b.Property<long?>("ChampionsID")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Decriptions_Path")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Images")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Link")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameChampions")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NamePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("author")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("createted_Date")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("PathID");
+
+                    b.HasIndex("ChampionsID");
+
+                    b.ToTable("tblPath");
+                });
+
+            modelBuilder.Entity("dona.Model.tblSkills", b =>
+                {
+                    b.Property<long>("SkillID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("SkillID"));
+
+                    b.Property<long?>("ChampionsID")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Images")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("NameChampions")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nameskill")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("author")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("createted_Date")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("SkillID");
+
+                    b.HasIndex("ChampionsID");
+
+                    b.ToTable("tblSkills");
+                });
+
+            modelBuilder.Entity("dona.Model.tblSkins", b =>
+                {
+                    b.Property<long>("SkinID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("SkinID"));
+
+                    b.Property<long?>("ChampionsID")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Images")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("NameChampions")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nameskin")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("author")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("createted_Date")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("SkinID");
+
+                    b.HasIndex("ChampionsID");
+
+                    b.ToTable("tblSkins");
+                });
+
             modelBuilder.Entity("dona.Model.viewPostMenu", b =>
                 {
                     b.Property<long>("PostID")
@@ -42,6 +616,9 @@ namespace dona.Migrations
                     b.Property<bool?>("IsActive")
                         .HasColumnType("bit");
 
+                    b.Property<string>("Link")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("MenuID")
                         .HasColumnType("int");
 
@@ -59,9 +636,6 @@ namespace dona.Migrations
 
                     b.Property<DateTime?>("createted_Date")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("link")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("PostID");
 
@@ -103,26 +677,26 @@ namespace dona.Migrations
                             PostID = 3L,
                             Images = "Image/anh3.jpg",
                             IsActive = true,
+                            Link = "https://www.youtube.com/watch?v=oJl_MKDUHqU",
                             MenuID = 8,
                             MenuName = "EsPorts",
                             PostOrder = 3,
                             Title = "STAYING THE COURSE |MSI 2024",
                             author = "oai",
-                            createted_Date = new DateTime(2024, 5, 10, 11, 0, 0, 0, DateTimeKind.Unspecified),
-                            link = "https://www.youtube.com/watch?v=oJl_MKDUHqU"
+                            createted_Date = new DateTime(2024, 5, 10, 11, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             PostID = 4L,
                             Images = "Image/anh4.jpg",
                             IsActive = true,
+                            Link = "https://www.youtube.com/watch?v=8rPhx_W6YDE",
                             MenuID = 8,
                             MenuName = "EsPorts",
                             PostOrder = 4,
                             Title = "TOP 5 PLAYS|BRACKET STAGE WK1",
                             author = "oai",
-                            createted_Date = new DateTime(2024, 5, 10, 13, 0, 0, 0, DateTimeKind.Unspecified),
-                            link = "https://www.youtube.com/watch?v=8rPhx_W6YDE"
+                            createted_Date = new DateTime(2024, 5, 10, 13, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
@@ -143,7 +717,7 @@ namespace dona.Migrations
                             PostID = 6L,
                             Abstract = "Camavor is a brutal land with a bloody legacy",
                             Contents = " Kalista seeks to change that. When her young and narcissistic uncle, Viego, becomes king she vows to temper his destructive instincts as his loyal confidant, advisor, and military general.",
-                            Images = "Image/anh6.png",
+                            Images = "Image/anh6.jpg",
                             IsActive = true,
                             MenuID = 9,
                             MenuName = "Lore",
@@ -185,26 +759,26 @@ namespace dona.Migrations
                             PostID = 9L,
                             Images = "Image/anh9.jpg",
                             IsActive = true,
+                            Link = "https://www.youtube.com/watch?v=-KHMMMHvDdM",
                             MenuID = 6,
                             MenuName = "Riot Games",
                             PostOrder = 9,
                             Title = "THE MAGESEEKER : A LEAGUE OF  LEGENDS STORY GAMEPLAY",
                             author = "oai",
-                            createted_Date = new DateTime(2024, 5, 10, 17, 10, 0, 0, DateTimeKind.Unspecified),
-                            link = "https://www.youtube.com/watch?v=-KHMMMHvDdM"
+                            createted_Date = new DateTime(2024, 5, 10, 17, 10, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             PostID = 10L,
                             Images = "Image/anh10.jpg",
                             IsActive = true,
+                            Link = "https://www.youtube.com/watch?v=n66QyujLXyg",
                             MenuID = 6,
                             MenuName = "Riot Games",
                             PostOrder = 10,
                             Title = "RIOT FORGE GAMES 2023|THE YEAR AHEAD",
                             author = "oai",
-                            createted_Date = new DateTime(2024, 5, 10, 17, 11, 0, 0, DateTimeKind.Unspecified),
-                            link = "https://www.youtube.com/watch?v=n66QyujLXyg"
+                            createted_Date = new DateTime(2024, 5, 10, 17, 11, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
@@ -219,14 +793,17 @@ namespace dona.Migrations
                     b.Property<string>("ActionName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CotrollerName")
+                    b.Property<string>("ControllerName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool?>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<int>("Levers")
+                    b.Property<int>("Levels")
                         .HasColumnType("int");
+
+                    b.Property<string>("Link")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MenuName")
                         .HasColumnType("nvarchar(max)");
@@ -249,7 +826,7 @@ namespace dona.Migrations
                         {
                             MenuID = 1,
                             IsActive = true,
-                            Levers = 1,
+                            Levels = 1,
                             MenuName = "Home",
                             MenuOrder = 1,
                             ParentID = 0,
@@ -259,7 +836,7 @@ namespace dona.Migrations
                         {
                             MenuID = 2,
                             IsActive = true,
-                            Levers = 1,
+                            Levels = 1,
                             MenuName = "Game",
                             MenuOrder = 2,
                             ParentID = 0,
@@ -268,8 +845,10 @@ namespace dona.Migrations
                         new
                         {
                             MenuID = 3,
+                            ActionName = "Index",
+                            ControllerName = "Champions",
                             IsActive = true,
-                            Levers = 1,
+                            Levels = 1,
                             MenuName = "Champions",
                             MenuOrder = 3,
                             ParentID = 0,
@@ -279,7 +858,7 @@ namespace dona.Migrations
                         {
                             MenuID = 4,
                             IsActive = true,
-                            Levers = 1,
+                            Levels = 1,
                             MenuName = "New",
                             MenuOrder = 4,
                             ParentID = 0,
@@ -289,7 +868,7 @@ namespace dona.Migrations
                         {
                             MenuID = 5,
                             IsActive = true,
-                            Levers = 1,
+                            Levels = 1,
                             MenuName = "About as",
                             MenuOrder = 6,
                             ParentID = 0,
@@ -299,7 +878,7 @@ namespace dona.Migrations
                         {
                             MenuID = 6,
                             IsActive = true,
-                            Levers = 2,
+                            Levels = 2,
                             MenuName = "Riot Games",
                             MenuOrder = 1,
                             ParentID = 4,
@@ -309,7 +888,7 @@ namespace dona.Migrations
                         {
                             MenuID = 7,
                             IsActive = true,
-                            Levers = 2,
+                            Levels = 2,
                             MenuName = "Game UpDate",
                             MenuOrder = 2,
                             ParentID = 4,
@@ -319,7 +898,7 @@ namespace dona.Migrations
                         {
                             MenuID = 8,
                             IsActive = true,
-                            Levers = 2,
+                            Levels = 2,
                             MenuName = "EsPorts",
                             MenuOrder = 3,
                             ParentID = 4,
@@ -329,7 +908,7 @@ namespace dona.Migrations
                         {
                             MenuID = 9,
                             IsActive = true,
-                            Levers = 2,
+                            Levels = 2,
                             MenuName = "Lore",
                             MenuOrder = 4,
                             ParentID = 4,
@@ -339,7 +918,7 @@ namespace dona.Migrations
                         {
                             MenuID = 10,
                             IsActive = true,
-                            Levers = 2,
+                            Levels = 2,
                             MenuName = "Community",
                             MenuOrder = 5,
                             ParentID = 4,
@@ -349,12 +928,138 @@ namespace dona.Migrations
                         {
                             MenuID = 11,
                             IsActive = true,
-                            Levers = 2,
+                            Levels = 2,
                             MenuName = "Merch",
                             MenuOrder = 6,
                             ParentID = 4,
                             Position = 1
                         });
+                });
+
+            modelBuilder.Entity("dona.Models.tblPost", b =>
+                {
+                    b.Property<long>("PostID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("PostID"));
+
+                    b.Property<string>("Abstract")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Contents")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Images")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Link")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MenuID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PostOrder")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("author")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("createted_Date")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("PostID");
+
+                    b.ToTable("tblPost");
+
+                    b.HasData(
+                        new
+                        {
+                            PostID = 1L,
+                            Images = "images1/anh1.jpg",
+                            IsActive = true,
+                            Link = "https://www.youtube.com/watch?v=gicjDRPN-5E",
+                            MenuID = 7,
+                            PostOrder = 1,
+                            Title = "The Unlock | Xbox Game Pass",
+                            author = "oai",
+                            createted_Date = new DateTime(2024, 6, 10, 8, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            PostID = 2L,
+                            Images = "images1/anh2.jpg",
+                            IsActive = true,
+                            Link = "https://www.riotgames.com/en/news/now-streaming-on-riot-mobile",
+                            MenuID = 7,
+                            PostOrder = 2,
+                            Title = "Now Streaming on Riot Mobile",
+                            author = "oai",
+                            createted_Date = new DateTime(2024, 5, 12, 10, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            PostID = 3L,
+                            Images = "images1/anh3.jpg",
+                            IsActive = true,
+                            Link = "https://www.riotgames.com/en/news/link-riot-account-to-xbox-game-pass",
+                            MenuID = 7,
+                            PostOrder = 3,
+                            Title = "Link Riot Account with Xbox Game Pass Today to Unlock Benefits",
+                            author = "oai",
+                            createted_Date = new DateTime(2024, 5, 12, 10, 0, 0, 0, DateTimeKind.Unspecified)
+                        });
+                });
+
+            modelBuilder.Entity("dona.Model.tblGames", b =>
+                {
+                    b.HasOne("dona.Model.tblChampions", "Champions")
+                        .WithMany()
+                        .HasForeignKey("ChampionsID");
+
+                    b.Navigation("Champions");
+                });
+
+            modelBuilder.Entity("dona.Model.tblLane", b =>
+                {
+                    b.HasOne("dona.Model.tblGames", "Games")
+                        .WithMany()
+                        .HasForeignKey("GamesGameID");
+
+                    b.Navigation("Games");
+                });
+
+            modelBuilder.Entity("dona.Model.tblPath", b =>
+                {
+                    b.HasOne("dona.Model.tblChampions", "Champions")
+                        .WithMany()
+                        .HasForeignKey("ChampionsID");
+
+                    b.Navigation("Champions");
+                });
+
+            modelBuilder.Entity("dona.Model.tblSkills", b =>
+                {
+                    b.HasOne("dona.Model.tblChampions", "Champions")
+                        .WithMany()
+                        .HasForeignKey("ChampionsID");
+
+                    b.Navigation("Champions");
+                });
+
+            modelBuilder.Entity("dona.Model.tblSkins", b =>
+                {
+                    b.HasOne("dona.Model.tblChampions", "Champions")
+                        .WithMany()
+                        .HasForeignKey("ChampionsID");
+
+                    b.Navigation("Champions");
                 });
 
             modelBuilder.Entity("dona.Model.viewPostMenu", b =>

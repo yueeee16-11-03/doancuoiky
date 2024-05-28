@@ -1,0 +1,68 @@
+@using dona.Areas.Admin.Models
+@using dona.Utilities;
+@model dona.Model.tblChampions
+    
+    @{
+        Layout="~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    }
+    <main id="main" class="main">
+        <div class="pagetitle">
+            <h4> Post management >  Edit a new Post</h4>
+            <hr />
+            <div class="row">
+                <div class="col-md-12">
+                    <form asp-action="Edit" method="Post">
+                        <div class="form-group col-md-6 mb-3">
+                            <input type="text" class ="form-control" asp-for="ChampionsID" type="hidden">
+                            <label> Menu Champion</label>
+                            <select asp-for="PathID" class="form-control"
+                        asp-items="@(new SelectList(ViewBag.mnList,"Value","Text"))" id="PathID"></select>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">NameChampion</label>
+                            <input asp-for="NameChampions" class="form-control"/>
+                            <span asp-validation-for="NameChampions" class="text-danger mb-4"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Description</label>
+                            <textarea asp-for="Decription" class="form-control" row="6"></textarea>
+                            <span asp-validation-for="Decription" class="text-danger mb-4"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Image</label>
+                            <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                            <button class="btn btn-success" type="button" onclick="openDialog()">Choose an image</button>
+                        </div>
+                            <input type="text" class="form-control"asp-for="Images"id="file-input"
+                        aria-describedby="button-addon2">
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Link</label>
+                            <textarea asp-for="Link" class="form-control" ></textarea>
+                            <span asp-validation-for="Link" class="text-danger mb-4"></span>
+                        </div>
+<div class="form-group d-none">
+    <input asp-for="createted_Date" class="form-control" value="@Functions.getCurrentDate()"/>
+</div>
+
+<div class="form-group">
+    <label>
+        @Html.CheckBox("IsActive",false)
+        Visible
+    </label>
+</div>
+<div class="form-group mt-5">
+    <button type="submit" value="Edit" class="btn btn-primary"asp-action="Edit"
+    onclick="return checkValue()">Sav Information</button>
+</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    @{
+        var SummerNote=new dona.Areas.Admin.Models.SummerNote("#Contents");
+        <partial name="_SummerNote" model="SummerNote"/>
+    }

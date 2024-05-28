@@ -2112,8 +2112,12 @@ textarea.form-control.is-invalid {
 }
 /*------------------- 7.5. Default Box -------------------*/
 .vs-sidebox {
-  padding: 35px 40px 40px 40px;
-  margin-bottom: 30px;
+  position: sticky; /* Làm cho phần tử này dính ở vị trí cố định khi cuộn trang */
+    top: 20px; /* Khoảng cách từ đỉnh cửa sổ trình duyệt đến phần tử */
+    order: -1; /* Đặt phần tử này lên trên các phần tử khác */
+    margin-bottom: 30px; 
+ 
+  
 }
 .vs-sidebox .vs-blog {
   margin-bottom: 25px;

@@ -1,0 +1,66 @@
+@using dona.Areas.Admin.Models
+@using dona.Utilities;
+@model dona.Model.tblPath
+    
+@{
+    Layout="~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    }
+    <main id="main" class="main">
+        <div class="pagetitle">
+            <h2>Add a Path</h2>
+        </div>
+        <div class="container shadow p-5">
+            <form method ="Post"asp-action="Edit">
+                <div class="form-row">
+                    <div class="form -group col-md-6 mb-3">
+                        <input type="text" class ="form-control" asp-for="PathID" type="hidden">
+                        <label>Path Name</label>
+                         
+                        <input type="text" class="form-control"asp-for="NamePath" placeholder="Path name...">
+                        <span  asp-validation-for="NamePath" class="alert-danger"></span>
+
+                    </div>
+                     <div class="form -group col-md-6 mb-3">
+                        <label>Description</label>
+                        <input type="text" class="form-control"asp-for="Decriptions_Path" placeholder="Path name...">
+                        <span  asp-validation-for="Decriptions_Path" class="alert-danger"></span>
+
+                    </div>
+                    
+    
+                     <div class="form-gorup col-md-6 mb-3">
+                        <label>Link</label>
+                        <input type="text" class="form-control"asp-for="Link"
+                         placeholder="Enter the link..">
+                    
+                    <div class="form-group col-md-6 mb-3">
+                        <label> Author</label>
+                        <input type="text" class="form-control"asp-for="author"
+                        value="0" placeholder="Enter the order of item...">
+                    </div>
+                    <div class="form-group col-md-6 mb-3">
+                            <label class="control-label">Image</label>
+                            <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                            <button class="btn btn-success" type="button" onclick="openDialog()">Choose an image</button>
+                        </div>
+                            <input type="text" class="form-control"asp-for="Images"id="file-input"
+                        aria-describedby="button-addon2">
+                        </div>
+                        </div>
+                    <div class="form-group col-md-6 mb-3">
+                        <label>
+                            @Html.CheckBox("IsActive",false)
+                            Visible
+                        </label>
+                    </div>
+                </div>
+                <a asp-controller="Menu"asp-action="Index" class="btn btn-lg btn-warning p-2">
+                    <i class="bi bi-arrow-left-circle"></i> Go back
+                </a>
+                <button type="submit" class="btn btn-lg btn-primary p-2">
+                    <i class="bi bi-file-plus-fill"> Update information</i>
+                </button>
+            </form>
+        </div>
+    </main>
