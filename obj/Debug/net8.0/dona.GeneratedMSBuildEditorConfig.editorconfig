@@ -17,215 +17,215 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = dona
 build_property.RootNamespace = dona
-build_property.ProjectDir = g:\DOANCUOIKY\dona\
+build_property.ProjectDir = G:\DOANCUOIKY\dona\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = g:\DOANCUOIKY\dona
+build_property.MSBuildProjectDirectory = G:\DOANCUOIKY\dona
 build_property._RazorSourceGeneratorDebug = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Champions/Create.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Champions/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hhbXBpb25zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Champions/Delete.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Champions/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hhbXBpb25zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Champions/Edit.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Champions/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hhbXBpb25zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Champions/Index.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Champions/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hhbXBpb25zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Game/Create.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Game/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR2FtZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Game/Delete.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Game/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR2FtZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Game/Edit.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Game/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR2FtZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Game/Index.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Game/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR2FtZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Home/Index.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Lane/Create.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Lane/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGFuZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Lane/Delete.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Lane/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGFuZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Lane/Edit.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Lane/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGFuZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Lane/Index.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Lane/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGFuZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Menu/Create.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Menu/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWVudVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Menu/Delete.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Menu/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWVudVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Menu/Edit.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Menu/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWVudVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Menu/Index.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Menu/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWVudVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Path/Create.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Path/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGF0aFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Path/Delete.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Path/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGF0aFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Path/Edit.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Path/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGF0aFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Path/Index.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Path/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGF0aFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Post/Create.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Post/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Post/Delete.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Post/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Post/Edit.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Post/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Post/Index.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Post/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Shared/Components/AdminMenu/Default.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Shared/Components/AdminMenu/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcQWRtaW5NZW51XERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Shared/_SummerNote.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Shared/_SummerNote.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9TdW1tZXJOb3RlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Skills/Create.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Skills/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2tpbGxzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Skills/Delete.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Skills/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2tpbGxzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Skills/Edit.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Skills/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2tpbGxzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Skills/Index.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Skills/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2tpbGxzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Skins/Create.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Skins/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2tpbnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Skins/Delete.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Skins/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2tpbnNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Skins/Edit.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Skins/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2tpbnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/Skins/Index.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/Skins/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2tpbnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/_ViewImports.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Areas/Admin/Views/_ViewStart.cshtml]
+[G:/DOANCUOIKY/dona/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Views/Champions/Index.cshtml]
+[G:/DOANCUOIKY/dona/Views/Champions/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbXBpb25zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Views/FileManager/Index.cshtml]
+[G:/DOANCUOIKY/dona/Views/FileManager/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsZU1hbmFnZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Views/Games/Index.cshtml]
+[G:/DOANCUOIKY/dona/Views/Games/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Views/Home/Details.cshtml]
+[G:/DOANCUOIKY/dona/Views/Home/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Views/Home/Index.cshtml]
+[G:/DOANCUOIKY/dona/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Views/Home/Privacy.cshtml]
+[G:/DOANCUOIKY/dona/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Views/Shared/Components/MenuView/Default.cshtml]
+[G:/DOANCUOIKY/dona/Views/Shared/Components/MenuView/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWVudVZpZXdcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Views/Shared/Components/Post/Default.cshtml]
+[G:/DOANCUOIKY/dona/Views/Shared/Components/Post/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUG9zdFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Views/Shared/Error.cshtml]
+[G:/DOANCUOIKY/dona/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Views/Shared/_ValidationScriptsPartial.cshtml]
+[G:/DOANCUOIKY/dona/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Views/_ViewImports.cshtml]
+[G:/DOANCUOIKY/dona/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Views/_ViewStart.cshtml]
+[G:/DOANCUOIKY/dona/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/DOANCUOIKY/dona/Views/Shared/_Layout.cshtml]
+[G:/DOANCUOIKY/dona/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-rvjummdjwz
